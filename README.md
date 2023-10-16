@@ -6,7 +6,7 @@ Examples include, but are not limited to: "Introduction to Robotics laboratory h
 ## Homework 1
 Deadline (hard): 20th of October, 23:59.The first homework is easy, so I advise doing it right for maximum points.
 1.  Install arduino IDE:https://www.arduino.cc/en/software2.
-2.  Create a PRIVATE Github repository, according to these specifications:
+2.  Create a PRIVATE Github repository, according to these specifications:  
     •Use this as an example:https://github.com/Irikos/IntroductionToRobotics  
     •Repository must be private  
     •You must provide access to the following github users: irikos, danadas-calescu00, adiRandom, alexsasu, alexion2001, surdubob, dandi08, radudilirici, vladfxstoader, IoanaLivia  
