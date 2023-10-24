@@ -1,7 +1,6 @@
 # Introduction to Robotics (2023 - 2024)
 
-_Description about the repo.
-Examples include, but are not limited to: "Introduction to Robotics laboratory homeworks, taken in the 3rd year at the Faculty of Mathematics and Computer Science, University of Bucharest. Each homework includes requirements, implementation details, code and image files."_ (write your own version)
+This repository contains a collection of assignments and projects related to digital electronics and microcontroller programming,  using Arduino boards. These assignments were completed as part of a course  during the 3rd year at the Faculty of Electrical Engineering and Computer Science
   
 ## Homework 1
 We will  install arduino IDE:https://www.arduino.cc/en/software2 and create a PRIVATE Github repository, according to these specifications: 
