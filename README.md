@@ -6,4 +6,10 @@ This repository contains a collection of assignments and projects related to dig
 We will  install arduino IDE:https://www.arduino.cc/en/software2 and create a PRIVATE Github repository, according to these specifications: 
 it is private, access to the following github users: irikos, danadas-calescu00, adiRandom, alexsasu, alexion2001, surdubob, dandi08, radudilirici, vladfxstoader, IoanaLivia  and its name is name  ”IntroductionToRobotics” .
 In this repo we will be posting our robotics homework, with code and videos of or work.
+
+## Homework 2
+Use a separate potentiometer for controlling each color of the RGB LED: Red,
+Green, and Blue. This control must leverage digital electronics. Specifically,
+you need to read the potentiometer’s value with Arduino and then write a
+mapped value to the LED pins.
     
