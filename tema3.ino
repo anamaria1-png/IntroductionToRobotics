@@ -1,51 +1,81 @@
+const int elevatorLeds[] = {2,3,4};  // Pinurile pentru LED-urile de la fiecare etaj
+const int elevatorButtons[] = {7,8,9};  // Pinurile butoanelor de la fiecare etaj
+const int elevatorOperationLed = 5;  // Pinul LED-ului de operare
+const int elevatorBuzzerPin = 6;  // Pinul buzzerului
 
-const int LEDs[] = {2, 3, 4}; // Pinii pentru LED-urile etajelor
-const int operationLED = 5; // Pin pentru LED-ul de stare a ascensorului
-const int buzzerPin = 6; // Pin pentru buzzer
+int currentFloor = 0;  // Etajul curent
+int targetFloor = -1;  // Etajul țintă
+int nextFloor = -1;  // Următorul etaj
+bool isMoving = false;  // Indicator dacă liftul se mișcă
 
-int currentFloor = 0; // Etajul curent
+unsigned long fadeStartTime;  // Timpul de începere a efectului de fading
+unsigned long lastButtonPressTime;  // Timpul ultimului apăsare a butonului
+unsigned long lastBlinkTime;  // Timpul ultimei blink-uri
+
+const long buttonDebounceTime = 50;  // Timp de debouncing pentru butoane
+const long blinkInterval = 1500;  // Intervalul de blink pentru LED-ul de operare
+const int fadeDuration = 1000;  // Durata efectului de fading
 
 void setup() {
+  // Inițializarea pinurilor
   for (int i = 0; i < 3; i++) {
-    pinMode(LEDs[i], OUTPUT);
-    digitalWrite(LEDs[i], LOW); // Stingem LED-urile la pornire
+    pinMode(elevatorLeds[i], OUTPUT);
+    analogWrite(elevatorLeds[i], (i == currentFloor) ? 255 : 0);
+    pinMode(elevatorButtons[i], INPUT_PULLUP);
   }
-  pinMode(operationLED, OUTPUT);
-  digitalWrite(operationLED, LOW); // Stingem LED-ul de stare a ascensorului la pornire
-  pinMode(buzzerPin, OUTPUT); // Configurăm pinul buzzer-ului ca ieșire
+  pinMode(elevatorOperationLed, OUTPUT);
+  digitalWrite(elevatorOperationLed, HIGH);
+  pinMode(elevatorBuzzerPin, OUTPUT);
 }
 
 void loop() {
+  // Verificarea butoanelor pentru selectarea etajului
   for (int i = 0; i < 3; i++) {
-    if (digitalRead(i + 6) == LOW) { // Butonul de etaj va fi conectat la pinii 6, 7, 8
-      goToFloor(i);
+    if (digitalRead(elevatorButtons[i]) == LOW && millis() - lastButtonPressTime > buttonDebounceTime) {
+      lastButtonPressTime = millis();
+      if (!isMoving) {
+        targetFloor = i;
+        if (currentFloor < targetFloor) {
+          nextFloor = currentFloor + 1;
+        } else if (currentFloor > targetFloor) {
+          nextFloor = currentFloor - 1;
+        }
+        isMoving = true;
+        tone(elevatorBuzzerPin, 400);
+        fadeStartTime = millis();
+      }
     }
   }
-  // Alte acțiuni sau verificări pot fi adăugate aici
+
+  if (isMoving) {
+    // Efectul de fading pentru LED-uri
+    unsigned long fadeElapsedTime = millis() - fadeStartTime;
+    int currentBrightness = 255 - map(fadeElapsedTime, 0, fadeDuration, 0, 255);
+    int nextBrightness = map(fadeElapsedTime, 0, fadeDuration, 0, 255);
+    analogWrite(elevatorLeds[currentFloor], currentBrightness);
+    analogWrite(elevatorLeds[nextFloor], nextBrightness);
+    
+    if (fadeElapsedTime >= fadeDuration) {
+      noTone(elevatorBuzzerPin);
+      currentFloor = nextFloor;
+      if (nextFloor == targetFloor) {
+        isMoving = false;
+        digitalWrite(elevatorOperationLed, HIGH);
+        tone(elevatorBuzzerPin, 1000, 200);
+      } else {
+        if (currentFloor < targetFloor) {
+          nextFloor = currentFloor + 1;
+        } else {
+          nextFloor = currentFloor - 1;
+        }
+        fadeStartTime = millis();
+      }
+    }
+  }
+
+  if (isMoving && millis() - lastBlinkTime >= blinkInterval) {
+    // Blink pentru LED-ul de operare în timp ce liftul se mișcă
+    digitalWrite(elevatorOperationLed, !digitalRead(elevatorOperationLed));
+    lastBlinkTime = millis();
+  }
 }
-
-void goToFloor(int floor) {
-  // Opriți LED-ul etajului curent
-  digitalWrite(LEDs[currentFloor], LOW);
-  // Mutare la noul etaj
-  currentFloor = floor;
-  // Aprindeți LED-ul pentru noul etaj
-  digitalWrite(LEDs[currentFloor], HIGH);
-
-  // Activează LED-ul de stare a ascensorului pentru a indica mișcarea
-  digitalWrite(operationLED, HIGH);
-
-  // Sunetul de semnalizare (folosind un buzzer)
-  tone(buzzerPin, 1000, 100); // Sunet de 1000 Hz pentru 0.1 secunde
-
-  // Adăugați o pauză pentru a simula mișcarea ascensorului
-  delay(2000); // Pauza de 2 secunde pentru mișcare simulată
-
-  // Oprește LED-ul de stare a ascensorului pentru a indica staționarea
-  digitalWrite(operationLED, LOW);
-
-  // Sunetul de semnalizare pentru uși (folosind un buzzer)
-  tone(buzzerPin, 1500, 100); // Sunet diferit pentru uși
-  delay(1000); // Pauza de 1 secundă pentru uși simulate
-}
-
