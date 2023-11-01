@@ -1,4 +1,4 @@
-const int elevatorLeds[] = {2,3,4};  // Pinurile pentru LED-urile de la fiecare etaj
+const int elevatorLeds[] = {2,9,4};  // Pinurile pentru LED-urile de la fiecare etaj
 const int elevatorButtons[] = {7,8,9};  // Pinurile butoanelor de la fiecare etaj
 const int elevatorOperationLed = 5;  // Pinul LED-ului de operare
 const int elevatorBuzzerPin = 6;  // Pinul buzzerului
