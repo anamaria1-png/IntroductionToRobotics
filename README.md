@@ -21,4 +21,8 @@ pressing the button for that floor should have no effect. Otherwise, after
 a button press, the elevator should ”wait for the doors to close” and then
 ”move” to the corresponding floor. If the elevator is in movement, it
 should either do nothing or it should stack its decision.
-    
+
+## Homework 4
+We will use 1 7-segment display, 1 joystick, resistors and wires to control the position of
+the segment and  they should jump from the current position
+to the other positions nearby, but without passing through ”walls”. When we press the joystick, the segment we are curently on should stop blinking, and then we move to the next step.
