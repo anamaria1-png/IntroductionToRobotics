@@ -26,3 +26,6 @@ should either do nothing or it should stack its decision.
 We will use 1 7-segment display, 1 joystick, resistors and wires to control the position of
 the segment and  they should jump from the current position
 to the other positions nearby, but without passing through ”walls”. When we press the joystick, the segment we are curently on should stop blinking, and then we move to the next step.
+
+## Homework 5
+Create a stopwatch timer utilizing a 4-digit 7-segment display and three buttons. The timer should measure time in tenths of a second and include a lap-saving feature, resembling the fundamental stopwatch functions commonly found on smartphones.
