@@ -29,3 +29,6 @@ to the other positions nearby, but without passing through ”walls”. When we 
 
 ## Homework 5
 Create a stopwatch timer utilizing a 4-digit 7-segment display and three buttons. The timer should measure time in tenths of a second and include a lap-saving feature, resembling the fundamental stopwatch functions commonly found on smartphones.
+
+## Homework 6
+This is a more ample project, including: Arduino Uno Board•Ultrasonic Sensor (HC-SR04)•LDR (Light-Dependent Resistor) aka Photocell aka Photoresistor aka LightSensor•RGB LED•Resistors as needed•Breadboard and connecting wires. The purpose of the project is to a menu structure , with sensor Settings,  Ultrasonic Alert Threshold and LDR Alert Threshold and then to go back to the menu.Then we need to reset the logger data, with a simple message with options of answear ''yes'' or ''no''.We have also a system Status to check current status and healthL Current Sensor Readings, Current Sensor Settings and  Display Logged Data. We also need to have a system for the RGB LED Control.
