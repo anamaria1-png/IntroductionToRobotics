@@ -47,7 +47,8 @@ to the other positions nearby, but without passing through ”walls”. When we 
 The starting position of the system should be at the decimal point (DP). The current position should consistently blink, regardless of whether the segment is active or inactive. Employ a joystick to navigate between adjacent positions (refer to the table for the corresponding movements). A quick press of the button toggles the segment state between ON and OFF. For a long press of the button, the entire display resets by deactivating all segments and relocating the current position to the decimal point. Interrupts are necessary for the CTI (Computer Science and Information Technology) application.
 
 HOW IT WORKS:HOW IT WORKS:https://www.youtube.com/shorts/2ulBD_uoUJ0
-AND A PICTURE:IMG_20231031_171220514.jpg
+AND A PICTURE:
+
 
 
 
