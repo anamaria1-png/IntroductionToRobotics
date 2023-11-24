@@ -22,12 +22,22 @@ AND A PICTURE:IMG_20231025_163049746.jpg
 
 
 ## Homework 3
-We design a control system that simulates a 3-floor elevator using the Arduino
-platform, with 3 LEDS for the elevator floors, one LED to evidentiate the state and 1 buzzer to announce the arriving of the elevator and also doors closing and moving.If the elevator is already at the desired floor,
-pressing the button for that floor should have no effect. Otherwise, after
-a button press, the elevator should ”wait for the doors to close” and then
-”move” to the corresponding floor. If the elevator is in movement, it
-should either do nothing or it should stack its decision.
+We will create a control system using the Arduino platform to simulate a 3-floor elevator and we will have the follow:
+
+1.LED Indicators: Utilize three LEDs, each representing one of the three floors. The LED corresponding to the current floor should be illuminated. Additionally, another LED should indicate the elevator's operational state. It should blink while the elevator is in motion and remain steady while stationary.
+2.Buttons: Integrate three buttons representing call buttons from the three floors. When pressed, the elevator should simulate movement towards the designated floor after a brief delay of 2-3 seconds.
+3. Buzzer (optional for Computer Science, mandatory for CTI): Optionally, include a buzzer to emit brief sounds during specific instances: when the elevator arrives at the desired floor (a sound resembling a "cling") and during elevator door closing and movement (potentially using two distinct sounds).
+4.State Change & Timers: If the elevator is already positioned at the requested floor, pressing the button for that floor should have no effect. Otherwise, after a button press, the elevator should "wait for the doors to close" and then "move" to the corresponding floor. If the elevator is already in motion, it should either disregard new commands or queue them (e.g., reach the first programmed floor, open the doors, wait, close them, and then proceed to the next desired floor).
+5.Debounce: Implement a debounce mechanism for the buttons to prevent unintended repeated button presses.
+
+WHAT WILL WE NEED?
+1.LEDs 4
+2.Buttons 3 for floor calls
+3.Buzzer 1 optional
+4.Resistors and wires 
+
+HOW IT WORKS: https://youtube.com/shorts/1mJRTkr9I-w?feature=share
+AND A PICTURE:IMG_20231025_163049746.jpg
 
 ## Homework 4
 We will use 1 7-segment display, 1 joystick, resistors and wires to control the position of
