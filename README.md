@@ -17,7 +17,7 @@ WHAT WILL WE NEED?
  3.Resistors and wires
 
 HOW IT WORKS: https://youtube.com/shorts/1mJRTkr9I-w?feature=share
-AND A PICTURE:
+AND A PICTURE:IMG_20231025_163049746.jpg
 
 
 
