@@ -37,7 +37,7 @@ WHAT WILL WE NEED?
 4.Resistors and wires 
 
 HOW IT WORKS: https://youtube.com/shorts/1mJRTkr9I-w?feature=share
-AND A PICTURE:IMG_20231025_163049746.jpg
+AND A PICTURE:IMG_20231031_171220514.jpg
 
 ## Homework 4
 We will use 1 7-segment display, 1 joystick, resistors and wires to control the position of
