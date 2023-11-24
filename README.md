@@ -46,19 +46,36 @@ to the other positions nearby, but without passing through ”walls”. When we 
 
 The starting position of the system should be at the decimal point (DP). The current position should consistently blink, regardless of whether the segment is active or inactive. Employ a joystick to navigate between adjacent positions (refer to the table for the corresponding movements). A quick press of the button toggles the segment state between ON and OFF. For a long press of the button, the entire display resets by deactivating all segments and relocating the current position to the decimal point. Interrupts are necessary for the CTI (Computer Science and Information Technology) application.
 
+WHAT WILL WE NEED?
+1.17-segment display
+2.1 joystick
+3.resistors and wires
+
 HOW IT WORKS:HOW IT WORKS:https://www.youtube.com/shorts/2ulBD_uoUJ0
 AND A PICTURE:![image](https://github.com/anamaria1-png/IntroductionToRobotics/assets/89720718/5bc74516-3339-45f8-8bbb-3ea714b71bc5)
 
-
-
-
-
-
-
-
-
 ## Homework 5
-Create a stopwatch timer utilizing a 4-digit 7-segment display and three buttons. The timer should measure time in tenths of a second and include a lap-saving feature, resembling the fundamental stopwatch functions commonly found on smartphones.
+ We will create a stopwatch timer using a 4-digit 7-segment display along with three buttons. The timer should measure time in tenths of a second and include a feature to save laps, resembling basic stopwatch functions commonly found in mobile phones.The initial value displayed on the 4-digit 7-segment display should be "000.0". The buttons should serve the following functions:
+
+    1.Button 1: Start or pause the timer.
+    2.Button 2: Reset the timer if it's in pause mode or clear saved laps if in lap viewing mode.
+    3.Button 3: Save a lap (when in counting mode), cycle through the last saved laps (up to 4 laps).
+
+Workflow:
+
+    1.Display Initialization: The display shows "000.0". Upon pressing the Start button, the timer begins counting.
+    2.During the timer's operation, each press of the lap button stores that timer's value in memory, allowing up to 4 laps to be saved (or more if needed). Pressing the lap button for the 5th time will overwrite the first saved lap. Pressing the reset button while the timer is running will have no effect, and pressing the pause button stops the timer.
+     3.Pause Mode: While the timer is paused, the lap button won't save additional laps. Pressing the reset button during pause mode resets the display to "000.0".
+     4.After a reset, pressing the lap button cycles through the saved lap times. Each press of the lap button moves to the next saved lap. Continuously pressing this button cycles through laps. Pressing the reset button in this state clears all saved laps and resets the timer to "000.0".
+
+     WHAT WILL WE NEED?
+1.LEDs 4
+2.Buttons 3 for floor calls
+3.Buzzer 1 optional
+4.Resistors and wires 
+
+HOW IT WORKS:https://www.youtube.com/shorts/2ulBD_uoUJ0
+AND A PICTURE:IMG_20231031_171220514.jpg
 
 ## Homework 6
 This is a more ample project, including: Arduino Uno Board•Ultrasonic Sensor (HC-SR04)•LDR (Light-Dependent Resistor) aka Photocell aka Photoresistor aka LightSensor•RGB LED•Resistors as needed•Breadboard and connecting wires. The purpose of the project is to a menu structure , with sensor Settings,  Ultrasonic Alert Threshold and LDR Alert Threshold and then to go back to the menu.Then we need to reset the logger data, with a simple message with options of answear ''yes'' or ''no''.We have also a system Status to check current status and healthL Current Sensor Readings, Current Sensor Settings and  Display Logged Data. We also need to have a system for the RGB LED Control.
