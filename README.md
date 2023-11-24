@@ -36,7 +36,7 @@ WHAT WILL WE NEED?
 3.Buzzer 1 optional
 4.Resistors and wires 
 
-HOW IT WORKS: https://youtube.com/shorts/1mJRTkr9I-w?feature=share
+HOW IT WORKS:https://www.youtube.com/shorts/2ulBD_uoUJ0
 AND A PICTURE:IMG_20231031_171220514.jpg
 
 ## Homework 4
