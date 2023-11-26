@@ -78,4 +78,39 @@ HOW IT WORKS:https://www.youtube.com/shorts/2ulBD_uoUJ0
 AND A PICTURE:IMG_20231031_171220514.jpg
 
 ## Homework 6
-This is a more ample project, including: Arduino Uno Board•Ultrasonic Sensor (HC-SR04)•LDR (Light-Dependent Resistor) aka Photocell aka Photoresistor aka LightSensor•RGB LED•Resistors as needed•Breadboard and connecting wires. The purpose of the project is to a menu structure , with sensor Settings,  Ultrasonic Alert Threshold and LDR Alert Threshold and then to go back to the menu.Then we need to reset the logger data, with a simple message with options of answear ''yes'' or ''no''.We have also a system Status to check current status and healthL Current Sensor Readings, Current Sensor Settings and  Display Logged Data. We also need to have a system for the RGB LED Control.
+We will design an "Arduino-based Smart Environment Monitor and Logger" that incorporates multiple sensors to collect environmental data. This system will log the gathered data into EEPROM, offering visual feedback via an RGB LED and enabling user interaction through a Serial Menu interface.
+
+Menu Structure:
+
+    Sensor Settings
+    1.1 Configure Sensors Sampling Interval: Prompt user for a value between 1 and 10 seconds to set the sampling rate for the sensors.
+    1.2 Set Ultrasonic Alert Threshold: Prompt for a threshold value for the ultrasonic sensor to trigger an alert if exceeded.
+    1.3 Set LDR (Light Dependent Resistor) Alert Threshold: Prompt for a threshold value for the LDR sensor to trigger an alert if exceeded.
+    1.4 Back: Return to the main menu.
+
+    Reset Logger Data
+    2.1 Yes: Confirm to delete all data.
+    2.2 No: Cancel reset operation.
+
+    System Status
+    3.1 Display Current Sensor Readings: Continuously print sensor readings at the set sampling rate. Include a method to exit this display.
+    3.2 Show Current Sensor Settings: Display current sampling rate and threshold values for all sensors.
+    3.3 Display Logged Data: Show the last 10 sensor readings or present data differently if creative.
+
+    RGB LED Control
+    4.1 Manual Color Control: Set RGB colors manually. Specify the input format or options clearly.
+    4.2 Toggle LED Automatic Mode: Turn automatic mode ON/OFF. In automatic mode, LED color indicates sensor alerts. In manual mode, use the last saved RGB values.
+    4.3 Back: Return to the main menu.
+
+    WHAT WILL WE NEED?
+Arduino Uno Board
+• Ultrasonic Sensor (HC-SR04)
+• LDR  Photoresistor 
+Sensor
+• RGB LED
+• Resistors as needed
+• Breadboard and connecting wires
+
+HOW IT WORKS:https://youtu.be/XUq0BtwGCR0
+
+
