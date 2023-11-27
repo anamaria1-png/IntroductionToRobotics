@@ -113,4 +113,14 @@ Sensor
 
 HOW IT WORKS:https://youtu.be/XUq0BtwGCR0
 
+## Homework 7
+We will create a simple game using an 8x8 matrix. The game should feature three distinct elements: the player (blinking slowly), bombs/bullets (blinking rapidly), and walls (non-blinking). This game serves as an introduction to working with the matrix. The main concept involves generating walls within the map (occupying around 50% to 75% of the map), allowing the player to maneuver and destroy these walls.
 
+WHAT WILL WE NEED?
+Arduino Uno Board
+• Joystick
+• 8x8 LED Matrix
+• MAX7219
+• Resistors and capacitors as needed
+• Breadboard and connecting wires
+• (Optional) Additional sensors / components for extended functionality
