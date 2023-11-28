@@ -124,3 +124,9 @@ Arduino Uno Board
 • Resistors and capacitors as needed
 • Breadboard and connecting wires
 • (Optional) Additional sensors / components for extended functionality
+
+HOW IT WORKS:HOW IT WORKS:https://youtube.com/shorts/WsCChvhiUpc?si=F7AAzlcvL_sJpSn4
+
+
+AND A PICTURE:![WhatsApp Image 2023-11-28 at 19 25 04_3ee6088e](https://github.com/anamaria1-png/IntroductionToRobotics/assets/89720718/1ac4445b-b6af-445f-9109-48d5d269e630)
+
