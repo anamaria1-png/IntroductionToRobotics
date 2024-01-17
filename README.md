@@ -51,7 +51,7 @@ WHAT WILL WE NEED?
 2.1 joystick
 3.resistors and wires
 
-HOW IT WORKS:HOW IT WORKS:https://youtu.be/LOUKQe0Qnno
+HOW IT WORKS:HOW IT WORKS:https://youtube.com/shorts/2ulBD_uoUJ0
 AND A PICTURE:![image](https://github.com/anamaria1-png/IntroductionToRobotics/assets/89720718/5bc74516-3339-45f8-8bbb-3ea714b71bc5)
 
 ## Homework 5
